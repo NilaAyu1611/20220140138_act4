@@ -32,7 +32,16 @@ class DetailOrderPage extends StatefulWidget {
             Text('Total Price: $totalHarga'),
 
             const SizedBox(height: 20),
-            
+            ElevatedButton(
+              onPressed: () {             
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (route) => false,
+                   );             
+            }, 
+            child: Text('Order Now'),
+            )
           ],
         ),
       ),
